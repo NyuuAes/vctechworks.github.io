@@ -183,7 +183,7 @@ body {
     /* Espaçamento entre os itens da lista */
     font-size: 15px;
     /* Tamanho da fonte */
-    line-height: auto;
+    line-height: 1.6;
     /* Espaçamento entre as linhas */
     color: #f5ae3e;
     /* Cor do texto (ajuste conforme necessário) */
