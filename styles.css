@@ -179,11 +179,11 @@ body {
 }
 
 .diferenciais-list li {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     /* Espaçamento entre os itens da lista */
     font-size: 15px;
     /* Tamanho da fonte */
-    line-height: 0.5;
+    line-height: 0;
     /* Espaçamento entre as linhas */
     color: #f5ae3e;
     /* Cor do texto (ajuste conforme necessário) */
