@@ -2,62 +2,110 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
+    /*box-shadow: inset 0px 0px 2px rgb(255, 255, 255);*/
 }
 
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f9f9f9;
+    background-color: #482a1a;
 }
 
 /* Container Geral */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
-/* Header */
+/* Estilo do Header */
 .site-header {
-    background-color: #333;
+    background-color: #000000;
+    /* Cor de fundo do header */
     color: #fff;
+    /* Cor do texto */
     padding: 1rem 0;
+    /* Espaçamento interno */
+    position: fixed;
+    /* Fixa o header no topo */
+    top: 0px;
+    /* Alinha no topo */
+    left: 0;
+    /* Alinha à esquerda */
+    width: 100%;
+    /* Ocupa toda a largura */
+    z-index: 1000;
+    /* Garante que o header fique acima de outros elementos */
 }
 
-.logo {
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-.slogan {
-    font-size: 1rem;
-    color: #ccc;
-}
-
-.navbar ul {
-    list-style: none;
+.site-header .container {
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    justify-content: space-between;
+    /* Alinha logo e navegação */
+    align-items: center;
+    /* Centraliza verticalmente */
+}
+
+.site-header img {
+    max-width: 200px;
+    /* Tamanho da logo */
+    height: auto;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+    /* Espaçamento entre os links */
 }
 
 .navbar a {
-    color: #fff;
+    display: none;
+    /* Oculta todos os links por padrão */
+    color: #f58522;
+    /* Cor dos links */
     text-decoration: none;
+    /* Remove sublinhado */
     font-weight: bold;
+    /* Texto em negrito */
 }
 
-/* Sección Hero */
+.navbar a[data-lang="es"] {
+    display: inline;
+    /* Exibe os links em espanhol por padrão */
+}
+
+/* Estilo do Banner Principal */
 .hero-section {
-    background-color: #4CAF50;
-    color: #fff;
+    background-color: #170a01;
+    /* Cor de fundo do banner */
+    color: #f5ae3e;
+    /* Cor do texto */
     text-align: center;
-    padding: 40px 0;
+    /* Centraliza o texto */
+    padding: 110px 0 30px;
+    /* Espaçamento interno (ajuste o topo para o header fixo) */
+    margin-top: 100px;
+    /* Compensa a altura do header fixo */
+    height: auto;
+    width: auto;
+
 }
 
-/* Sección de Servicios */
+.hero-section h2 {
+    font-size: 1.5rem;
+    /* Tamanho do título */
+    margin-bottom: 10px;
+    /* Espaçamento abaixo do título */
+}
+
+.hero-section p {
+    font-size: 1rem;
+    /* Tamanho do parágrafo */
+}
+
+
+/* Seção de Serviços */
 .services-section {
     background-color: #fff;
     padding: 40px 0;
@@ -77,11 +125,79 @@ body {
     background-color: #f9f9f9;
 }
 
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
 /* Sobre Nosotros */
 .about-section {
-    background-color: #f4f4f4;
-    padding: 40px 0;
+    background-color: #482a1a;
+    /*float: center;*/
+    margin: 25px auto;
+    width: 100%;
+    /*padding: 30px;*/
+    text-align: justify;
 }
+
+.about-section h2 {
+    font-family: 'Courier New', Courier, monospace;
+    /* margin-top: 40px;*/
+    font-size: 2.5em;
+    color: #f5ae3e;
+
+}
+
+.about-section p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+    font-size: 1em;
+    color: #f58522;
+    overflow: auto;
+}
+
+.diferenciais {
+    text-align: center;
+    font-size: 0.5em;
+    margin: 15px auto;
+    width: 100%;
+
+}
+
+.diferenciais-list {
+    list-style-type: none;
+    /* Remove os marcadores padrão da lista */
+    padding-left: 0;
+    /* Remove o padding padrão da lista */
+    padding: 30px;
+    text-align: start;
+}
+
+.diferenciais-list li {
+    margin-bottom: 8px;
+    /* Espaçamento entre os itens da lista */
+    font-size: 15px;
+    /* Tamanho da fonte */
+    line-height: auto;
+    /* Espaçamento entre as linhas */
+    color: #f5ae3e;
+    /* Cor do texto (ajuste conforme necessário) */
+
+}
+
+.diferenciais-list li::before {
+    content: "✅";
+    /* Adiciona o emoji de check antes de cada item */
+    margin-right: 10px;
+    /* Espaçamento entre o emoji e o texto */
+}
+
+
 
 /* Contacto */
 .contact-section {
@@ -117,20 +233,47 @@ body {
 
 /* Footer */
 .site-footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #170a01;
+    color: #f5ae3e;
     text-align: center;
     padding: 20px 0;
 }
 
-/* Responsividade */
+.site-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Seletor de Idiomas */
+.language-selector {
+    margin-top: auto;
+    background-color: #000000;
+    color: #fff;
+    /* Alinha à direita */
+}
+
+.language-selector select {
+
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
+
+}
+
 @media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
+    .about-section h2 {
+        font-size: 1.5rem;
+        /* Tamanho menor para telas pequenas */
+        margin-bottom: 15px;
+        /* Espaçamento menor */
     }
 
-    .service-grid {
-        grid-template-columns: 1fr;
+    .about-section p {
+        font-size: 0.9rem;
+        /* Tamanho menor para telas pequenas */
     }
 }
