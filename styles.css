@@ -145,7 +145,7 @@ body {
 
 /* Seletor de Idiomas */
 .language-selector {
-    margin-top: 85%;    
+    margin-left: 75%;    
     background-color: #000000;
     color: #fff;
 }
@@ -154,13 +154,13 @@ body {
     margin: 0px;
     padding: 0px;
     border-radius: 5px;
-    border: 2px solid #ccc;
+    border: 1.5px solid #ccc;
     background-color: #fff;
     color: #333;
     font-size: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .container {
         flex-direction: column;
         align-items: flex-start;
@@ -172,7 +172,7 @@ body {
     }
 
     .hero-section {
-        margin-top: 190px;
+        margin-top: 150px;
     }
 
     .about-section h2 {
