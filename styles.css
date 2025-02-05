@@ -2,8 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    /*box-sizing: border-box;*/
-    /*box-shadow: inset 0px 0px 2px rgb(255, 255, 255);*/
+    box-sizing: border-box;
 }
 
 body {
@@ -17,140 +16,83 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Estilo do Header */
 .site-header {
     background-color: #000000;
-    /* Cor de fundo do header */
     color: #fff;
-    /* Cor do texto */
     padding: 1rem 0;
-    /* Espaçamento interno */
     position: fixed;
-    /* Fixa o header no topo */
-    top: 0px;
-    /* Alinha no topo */
+    top: 0;
     left: 0;
-    /* Alinha à esquerda */
     width: 100%;
-    /* Ocupa toda a largura */
     z-index: 1000;
-    /* Garante que o header fique acima de outros elementos */
 }
 
 .site-header .container {
     display: flex;
     justify-content: space-between;
-    /* Alinha logo e navegação */
     align-items: center;
-    /* Centraliza verticalmente */
 }
 
 .site-header img {
-    max-width: 150px;
-    /* Tamanho da logo */
+    max-width: 200px;
     height: auto;
 }
 
 .navbar {
     display: flex;
     gap: 20px;
-    /* Espaçamento entre os links */
 }
 
 .navbar a {
     display: none;
-    /* Oculta todos os links por padrão */
     color: #f58522;
-    /* Cor dos links */
     text-decoration: none;
-    /* Remove sublinhado */
     font-weight: bold;
-    /* Texto em negrito */
 }
 
 .navbar a[data-lang="es"] {
     display: inline;
-    /* Exibe os links em espanhol por padrão */
 }
 
 /* Estilo do Banner Principal */
 .hero-section {
     background-color: #170a01;
-    /* Cor de fundo do banner */
     color: #f5ae3e;
-    /* Cor do texto */
     text-align: center;
-    /* Centraliza o texto */
-    padding: 110px 0 30px;
-    /* Espaçamento interno (ajuste o topo para o header fixo) */
-    margin-top: 100px;
-    /* Compensa a altura do header fixo */
-    height: auto;
-    width: auto;
-
+    padding: 2rem 1rem;
+    margin-top: 199px;
 }
+
 
 .hero-section h2 {
     font-size: 1.5rem;
-    /* Tamanho do título */
     margin-bottom: 10px;
-    /* Espaçamento abaixo do título */
 }
 
 .hero-section p {
     font-size: 1rem;
-    /* Tamanho do parágrafo */
-}
-
-
-/* Seção de Serviços */
-.services-section {
-    background-color: #fff;
-    padding: 40px 0;
-}
-
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.service-item {
-    text-align: center;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-.service-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.service-item p {
-    font-size: 1rem;
-    color: #555;
 }
 
 /* Sobre Nosotros */
 .about-section {
     background-color: #482a1a;
-    /*float: center;*/
     margin: 25px auto;
     width: 100%;
-    /*padding: 30px;*/
-    text-align: justify;
+    /*text-align: justify;*/
 }
 
 .about-section h2 {
     font-family: 'Courier New', Courier, monospace;
-    /* margin-top: 40px;*/
     font-size: 2.5em;
     color: #f5ae3e;
-
+    text-align: center;
 }
 
 .about-section p {
@@ -159,6 +101,7 @@ body {
     font-size: 1em;
     color: #f58522;
     overflow: auto;
+    text-align: justify;
 }
 
 .diferenciais {
@@ -166,69 +109,25 @@ body {
     font-size: 0.5em;
     margin: 15px auto;
     width: 100%;
-
 }
 
 .diferenciais-list {
     list-style-type: none;
-    /* Remove os marcadores padrão da lista */
     padding-left: 0;
-    /* Remove o padding padrão da lista */
     padding: 30px;
     text-align: start;
 }
 
 .diferenciais-list li {
-    margin-bottom: 5px;
-    /* Espaçamento entre os itens da lista */
+    margin-bottom: 8px;
     font-size: 15px;
-    /* Tamanho da fonte */
-    line-height: 0;
-    /* Espaçamento entre as linhas */
+    line-height: auto;
     color: #f5ae3e;
-    /* Cor do texto (ajuste conforme necessário) */
-
 }
 
 .diferenciais-list li::before {
     content: "✅";
-    /* Adiciona o emoji de check antes de cada item */
     margin-right: 10px;
-    /* Espaçamento entre o emoji e o texto */
-}
-
-
-
-/* Contacto */
-.contact-section {
-    background-color: #fff;
-    padding: 40px 0;
-}
-
-.contact-section form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-section input,
-.contact-section textarea {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact-section button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact-section button:hover {
-    background-color: #45a049;
 }
 
 /* Footer */
@@ -249,11 +148,9 @@ body {
     margin-top: auto;
     background-color: #000000;
     color: #fff;
-    /* Alinha à direita */
 }
 
 .language-selector select {
-
     margin: 0px;
     padding: 0px;
     border-radius: 5px;
@@ -261,19 +158,37 @@ body {
     background-color: #fff;
     color: #333;
     font-size: 1rem;
-
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-section {
+        margin-top: 295px;
+    }
+
     .about-section h2 {
         font-size: 1.5rem;
-        /* Tamanho menor para telas pequenas */
         margin-bottom: 15px;
-        /* Espaçamento menor */
     }
 
     .about-section p {
         font-size: 0.9rem;
-        /* Tamanho menor para telas pequenas */
+    }
+
+    .diferenciais-list {
+        padding: 15px;
+    }
+
+    .diferenciais-list li {
+        font-size: 14px;
     }
 }
