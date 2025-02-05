@@ -41,13 +41,13 @@ body {
 }
 
 .site-header img {
-    max-width: 150px;
+    max-width: 120px;
     height: auto;
 }
 
 .navbar {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
 .navbar a {
@@ -167,7 +167,7 @@ body {
     }
 
     .navbar {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
     }
 
