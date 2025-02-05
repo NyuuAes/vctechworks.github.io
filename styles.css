@@ -15,8 +15,8 @@ body {
 /* Container Geral */
 .container {
     max-width: 1200px;
-    margin: 15px auto;
-    padding: 15px 20px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,7 +58,7 @@ body {
 }
 
 .navbar a[data-lang="es"] {
-    display: inline;
+    display: table-column;
 }
 
 /* Estilo do Banner Principal */
