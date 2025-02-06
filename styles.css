@@ -8,8 +8,8 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #482a1a;
+    color: #d6851b;
+    background-color: #040404;
 }
 
 /* Container Geral */
@@ -24,7 +24,7 @@ body {
 
 /* Estilo do Header */
 .site-header {
-    background-color: #000000;
+    background-color: #040404;
     color: #fff;
     padding: 1rem 0;
     position: fixed;
@@ -41,7 +41,7 @@ body {
 }
 
 .site-header img {
-    max-width: 110px;
+    max-width: 100px;
     height: auto;
 }
 
@@ -52,54 +52,57 @@ body {
 
 .navbar a {
     display: none;
-    color: #f58522;
+    color: #d6851b;
     text-decoration: none;
     font-weight: bold;
 }
 
 .navbar a[data-lang="es"] {
-    display: table-column;
+    /*display: table-column;*/
+    display: list-item;
 }
 
 /* Estilo do Banner Principal */
 .hero-section {
-    background-color: #170a01;
-    color: #f5ae3e;
+    background-color: #13b1d5;
+    color: #040404;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 3rem 2.5rem;
+    /*padding: 1.5rem 0.6rem;*/
     margin-top: 100px;
 }
 
 
 .hero-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
 }
 
 .hero-section p {
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 /* Sobre Nosotros */
 .about-section {
-    background-color: #482a1a;
-    margin: 25px auto;
+    background-color: #1a80a7;
+    /*background: linear-gradient(#191c37, #1a80a7);*/
+    margin: 0px auto;
     width: 100%;
     /*text-align: justify;*/
 }
 
 .about-section h2 {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 2.5em;
-    color: #f5ae3e;
+    font-size: 2em;
+    color: #fff;
     text-align: center;
 }
 
 .about-section p {
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 50px;
+    margin-top: 40px;
     font-size: 1em;
-    color: #f58522;
+    color: #fff;
     overflow: auto;
     text-align: justify;
 }
@@ -122,7 +125,7 @@ body {
     margin-bottom: 8px;
     font-size: 15px;
     line-height: auto;
-    color: #f5ae3e;
+    color: #fff;
 }
 
 .diferenciais-list li::before {
@@ -132,8 +135,8 @@ body {
 
 /* Footer */
 .site-footer {
-    background-color: #170a01;
-    color: #f5ae3e;
+    background-color: #040404;
+    color: #fff;
     text-align: center;
     padding: 20px 0;
 }
@@ -145,8 +148,8 @@ body {
 
 /* Seletor de Idiomas */
 .language-selector {
-    margin-left: 75%;    
-    background-color: #000000;
+    margin-left: 70%;
+    background-color: #040404;
     color: #fff;
 }
 
@@ -155,12 +158,12 @@ body {
     padding: 0px;
     border-radius: 5px;
     border: 1.5px solid #ccc;
-    background-color: #fff;
+    background-color: #efe1d5;
     color: #333;
-    font-size: 1rem;
+    font-size: 0.7rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
     .container {
         flex-direction: column;
         align-items: flex-start;
