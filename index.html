@@ -1,241 +1,230 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VC TechWorks - Soluciones Técnicas Digitales a Medida</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="image/logo.ico" type="image/x-icon">
+    <title>VC TechWorks</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/image/logo.ico" type="image/x-icon">
+
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header class="site-header">
-        <div class="container">
+    <!--Seletor de idiomas-->
+    <div class="language-selector">
+        <img id="selectedFlag" src="https://flagcdn.com/w40/es.png" alt="Espanhol" class="selected-flag"
+            onclick="toggleDropdown()">
 
-            <!-- Logo da Empresa -->
-            <a href="index.html">
-                <img src="image/LogoMarca-original.ico" alt="Logo de VC TechWorks" title="VC TechWorks">
+        <div id="flagDropdown" class="flag-dropdown">
+            <img src="https://flagcdn.com/w40/es.png" alt="Espanhol" onclick="changeLanguage('es', this)">
+            <img src="https://flagcdn.com/w40/us.png" alt="Inglês" onclick="changeLanguage('us', this)">
+            <img src="https://flagcdn.com/w40/br.png" alt="Português BR" onclick="changeLanguage('br', this)">
+            <img src="https://flagcdn.com/w40/pt.png" alt="Português PT" onclick="changeLanguage('pt', this)">
+        </div>
+    </div>
+
+
+    <!-- Cabeçalho -->
+    <header>
+
+        <div class="header">
+
+            <!--Logo da Empresa-->
+            <a class="site-header" href="index.html">
+                <img src="assets/image/LogoMarca-original.ico" alt="Logo de VC TechWorks" title="VC TechWorks">
             </a>
 
-            <!-- Navegação -->
+            <!--Navegação-->
             <nav class="navbar">
-                <a href="index.html" data-lang="es">Inicio</a>
-                <a href="index.html" data-lang="en">Home</a>
-                <a href="index.html" data-lang="pt-br">Início</a>
-                <a href="index.html" data-lang="pt-pt">Início</a>
-
-                <a href="servicios.html" data-lang="es">Servicios</a>
-                <a href="servicios.html" data-lang="en">Services</a>
-                <a href="servicios.html" data-lang="pt-br">Serviços</a>
-                <a href="servicios.html" data-lang="pt-pt">Serviços</a>
-
-                <a href="contacto.html" data-lang="es">Contacto</a>
-                <a href="contacto.html" data-lang="en">Contact</a>
-                <a href="contacto.html" data-lang="pt-br">Contato</a>
-                <a href="contacto.html" data-lang="pt-pt">Contacto</a>
+                <a id="navbar-in" href="index.html">Inicio</a>
+                <a id="navbar-serv" href="servicios.html">Servicios</a>
+                <a id="navbar-cont" href="contacto.html">Contacto</a>
             </nav>
-        </div>
-                <!-- Seletor de Idiomas -->
-            <div class="language-selector">
-                <select id="language-select">
-                    <option value="es">Español</option>
-                    <option value="en">English</option>
-                    <option value="pt-br">Português (BR)</option>
-                    <option value="pt-pt">Português (PT)</option>
-                </select>
-            </div>
-        
+
     </header>
 
-    <!-- Banner Principal -->
+    <!-- Conteúdo Principal - Banner -->
     <section class="hero-section">
-        <div class="container">
-            <h2 data-lang="es">Bienvenido a VC TechWorks</h2>
-            <h2 data-lang="en">Welcome to VC TechWorks</h2>
-            <h2 data-lang="pt-br">Bem-vindo à VC TechWorks</h2>
-            <h2 data-lang="pt-pt">Bem-vindo à VC TechWorks</h2>
-            <p data-lang="es">Su solución completa para mantenimiento y reparación de notebooks y computadoras en
-                Valladolid.</p>
-            <p data-lang="en">Your complete solution for maintenance and repair of notebooks and computers in
-                Valladolid.</p>
-            <p data-lang="pt-br">Sua solução completa para manutenção e reparação de notebooks e computadores em
-                Valladolid.</p>
-            <p data-lang="pt-pt">A sua solução completa para manutenção e reparação de notebooks e computadores em
-                Valladolid.</p>
+        <div>
+            <h2 id="about-title-bnn">Bienvenido a VC TechWorks</h2>
+            <p id="about-content-bnn">Su solución completa para mantenimiento y reparación de notebooks y computadoras
+                en Valladolid.</p>
         </div>
     </section>
 
-    <!-- Sobre Nosotros -->
-    <section id="sobre-nosotros" class="about-section">
-        <div class="container">
-            <h2 data-lang="es">Sobre Nosotros</h2>
-            <h2 data-lang="en">About Us</h2>
-            <h2 data-lang="pt-br">Sobre Nós</h2>
-            <h2 data-lang="pt-pt">Sobre Nós</h2>
-            <p data-lang="es">Somos una empresa especializada en asistencia técnica para computadores de escritorio y
-                notebooks, ofreciendo soluciones completas para reparación, mantenimiento y optimización de
-                dispositivos. Nuestro equipo altamente calificado trabaja con las tecnologías más avanzadas del mercado
-                para diagnosticar y resolver problemas de hardware y software con precisión y rapidez.</p>
-            <p data-lang="en">We are a company specialized in technical assistance for desktop computers and notebooks,
-                offering complete solutions for repair, maintenance and optimization of devices. Our highly qualified
-                team works with the most advanced technologies on the market to diagnose and solve hardware and software
-                problems with precision and agility.</p>
-            <p data-lang="pt-br">Somos uma empresa especializada em assistência técnica para computadores de mesa e
-                notebooks, oferecendo soluções completas para reparo, manutenção e otimização de dispositivos. Nossa
-                equipe altamente qualificada trabalha com as tecnologias mais avançadas do mercado para diagnosticar e
-                resolver problemas de hardware e software com precisão e agilidade.</p>
-            <p data-lang="pt-pt">Somos uma empresa especializada em assistência técnica a computadores de secretária e
-                portáteis, oferecendo soluções completas para reparação, manutenção e otimização de dispositivos. A
-                nossa equipa altamente qualificada trabalha com as tecnologias mais avançadas do mercado para
-                diagnosticar e resolver problemas de hardware e software com precisão e agilidade.</p>
+    <!--Sobre nós-->
+
+    <div class="about-section" class="content">
+        <h2 id="about-title">Sobre Nosotros</h2>
+        <p id="about-content">
+            Somos una empresa especializada en asistencia técnica para computadores de escritorio y
+            notebooks, ofreciendo soluciones completas para reparación, mantenimiento y optimización de
+            dispositivos. Nuestro equipo altamente calificado trabaja con las tecnologías más avanzadas del mercado
+            para diagnosticar y resolver problemas de hardware y software con precisión y rapidez.
+        </p>
+        <h3 class="diferenciais" id="services-title">Nuestros diferenciales</h3>
+        <ul class="diferenciais-list" id="services-list">
+            <li id="service-personalized">Servicio Personalizado – Diagnóstico preciso y soluciones adaptadas a las
+                necesidades de cada cliente.</li>
+            <li id="service-fast">Servicio rápido y eficiente – Trabajamos con plazos ajustados para minimizar el tiempo
+                de inactividad de su equipo.</li>
+            <li id="service-repairs">Reparaciones de Hardware y Software – Reemplazamos piezas, reparamos placas base,
+                actualizamos memoria y SSD, formateamos, instalamos sistemas operativos y más.</li>
+            <li id="service-data-recovery">Recuperación de datos: soluciones avanzadas para recuperar archivos perdidos
+                o dañados.</li>
+            <li id="service-virus-removal">Eliminación de virus y seguridad digital: protección contra amenazas
+                cibernéticas, malware y ataques que podrían comprometer sus datos.</li>
+            <li id="service-preventive">Mantenimiento Preventivo – Evite problemas futuros con limpieza interna, cambios
+                de pasta térmica y optimización del sistema.</li>
+            <li id="service-support">Soporte Residencial y Empresarial – Soporte técnico en sitio para mayor comodidad,
+                ya sea para usuarios domésticos o empresas.</li>
+            <li id="service-guarantee">Garantía de servicio – Trabajamos con transparencia y ofrecemos garantía por
+                todos los servicios prestados.</li>
+        </ul>
+    </div>
+
+    <!--Ver serviços e contatos-->
+
+    <div class="container-servicos-contatos">
+        <h2 id="info">Descubra más en el área de Servicios y Contacto.</h2>
+
+        <div class="botoes-servicos-contatos">
+            <a id="info-serv" href="servicios.html">Servicios</a>
+            <a id="info-cont" href="contacto.html">Contacto</a>
         </div>
-
-        <div class="diferenciais">
-            <h2 data-lang="es">Nuestros diferenciales</h2>
-            <h2 data-lang="en">Our differentials</h2>
-            <h2 data-lang="pt-br">Nossos diferenciais</h2>
-            <h2 data-lang="pt-pt">Os nossos diferenciais</h2>
-
-            <ul class="diferenciais-list">
-                <li data-lang="es">Servicio Personalizado – Diagnóstico preciso y soluciones adaptadas a las necesidades
-                    de cada cliente.</li>
-                <li data-lang="en">Personalized Service – Accurate diagnosis and tailored solutions to meet the needs of
-                    each client.</li>
-                <li data-lang="pt-br">Atendimento Personalizado – Diagnóstico preciso e soluções sob medida para atender
-                    às necessidades de cada cliente.</li>
-                <li data-lang="pt-pt">Atendimento Personalizado – Diagnóstico preciso e soluções à medida para ir ao
-                    encontro das necessidades de cada cliente.</li>
-            </ul>
-
-            <ul class="diferenciais-list">
-                <li data-lang="es"> Servicio rápido y eficiente – Trabajamos con plazos ajustados para minimizar el
-                    tiempo de inactividad de su equipo.</li>
-                <li data-lang="en"> Fast and Efficient Service – We work with short deadlines to minimize downtime
-                    of your equipment.</li>
-                <li data-lang="pt-br"> Serviço Rápido e Eficiente – Trabalhamos com prazos reduzidos para minimizar
-                    o tempo de inatividade do seu equipamento.</li>
-                <li data-lang="pt-pt"> Serviço Rápido e Eficiente – Trabalhamos com prazos reduzidos para minimizar
-                    o tempo de paragem do seu equipamento.</li>
-            </ul>
+    </div>
 
 
-            <ul class="diferenciais-list">
-                <li data-lang="es"> Reparaciones de Hardware y Software – Reemplazamos piezas, reparamos placas
-                    base, actualizamos memoria y SSD, formateamos, instalamos sistemas operativos y más.</li>
-                <li data-lang="en"> Hardware and Software Repairs – We perform part replacements, motherboard
-                    repairs, memory and SSD upgrades, formatting, operating system installations and more.</li>
-                <li data-lang="pt-br"> Reparos em Hardware e Software – Realizamos troca de peças, conserto de
-                    placas-mãe, upgrades de memória e SSD, formatação, instalação de sistemas operacionais e
-                    mais.</li>
-                <li data-lang="pt-pt"> Reparações em Hardware e Software – Efetuamos troca de peças, reparação
-                    de motherboards, upgrades de memória e SSD, formatação, instalação de sistemas operativos e mais.
-                </li>
-            </ul>
-
-
-            <ul class="diferenciais-list">
-                <li data-lang="es"> Recuperación de datos: soluciones avanzadas para recuperar archivos
-                    perdidos o dañados.</li>
-                <li data-lang="en"> Data Recovery – Advanced solutions for recovering lost or corrupted
-                    files.</li>
-                <li data-lang="pt-br"> Recuperação de Dados – Soluções avançadas para recuperação de
-                    arquivos perdidos ou corrompidos.</li>
-                <li data-lang="pt-pt"> Recuperação de Dados – Soluções avançadas para recuperação de
-                    ficheiros perdidos ou corrompidos.</li>
-            </ul>
-
-
-            <ul class="diferenciais-list">
-                <li data-lang="es"> Eliminación de virus y seguridad digital: protección contra amenazas
-                    cibernéticas, malware y ataques que podrían comprometer sus datos.</li>
-                <li data-lang="en"> Virus Removal and Digital Security – Protection against cyber
-                    threats, malware and attacks that could compromise your data.</li>
-                <li data-lang="pt-br"> Remoção de Vírus e Segurança Digital – Proteção contra ameaças
-                    cibernéticas, malware e ataques que possam comprometer seus dados.</li>
-                <li data-lang="pt-pt"> Remoção de Vírus e Segurança Digital – Proteção contra
-                    ciberameaças, malware e ataques que possam comprometer os seus dados.</li>
-            </ul>
-
-
-            <ul class="diferenciais-list">
-                <li data-lang="es"> Mantenimiento Preventivo – Evite problemas futuros con limpieza
-                    interna, cambios de pasta térmica y optimización del sistema.</li>
-                <li data-lang="en"> Preventative Maintenance – Avoid future problems with internal
-                    cleaning, thermal paste changes and system optimization.</li>
-                <li data-lang="pt-br"> Manutenção Preventiva – Evite problemas futuros com limpezas
-                    internas, trocas de pasta térmica e otimização do sistema.</li>
-                <li data-lang="pt-pt"> Manutenção Preventiva – Evite problemas futuros com limpezas
-                    internas, trocas de pasta térmica e otimização do sistema.</li>
-            </ul>
-
-
-            <ul class="diferenciais-list">
-                <li data-lang="es"> Soporte Residencial y Empresarial – Soporte técnico en sitio
-                    para mayor comodidad, ya sea para usuarios domésticos o empresas.</li>
-                <li data-lang="en"> Residential and Business Service – On-site technical support
-                    for greater convenience, whether for home users or businesses.</li>
-                <li data-lang="pt-br"> Atendimento Residencial e Empresarial – Suporte técnico
-                    no local para maior comodidade, seja para usuários domésticos ou empresas.</li>
-                <li data-lang="pt-pt"> Serviço Residencial e Empresarial – Suporte técnico no
-                    local para maior comodidade, seja para utilizadores domésticos ou empresas.</li>
-            </ul>
-
-            <ul class="diferenciais-list">
-                <li data-lang="es"> Garantía de servicio – Trabajamos con transparencia y
-                    ofrecemos garantía por todos los servicios prestados.</li>
-                <li data-lang="en"> Service Guarantee – We work with transparency and offer
-                    a guarantee for all services provided.</li>
-                <li data-lang="pt-br"> Garantia de Serviço – Trabalhamos com transparência e
-                    oferecemos garantia para todos os serviços prestados.</li>
-                <li data-lang="pt-pt"> Garantia de Serviço – Trabalhamos com transparência e
-                    oferecemos garantia para todos os serviços prestados.</li>
-            </ul>
-
-
-            <!-- Repetir para os outros diferenciais -->
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <p data-lang="es">&copy; 2025 VC TechWorks. &reg;Todos los derechos reservados.</p>
-            <p data-lang="en">&copy; 2025 VC TechWorks. &reg;All rights reserved.</p>
-            <p data-lang="pt-br">&copy; 2025 VC TechWorks. &reg;Todos os direitos reservados.</p>
-            <p data-lang="pt-pt">&copy; 2025 VC TechWorks. &reg;Todos os direitos reservados.</p>
-        </div>
+    <!-- Rodapé -->
+    <footer>
+        <p id="footer-copyright">VC TechWorks © 2025. | ®Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Script para troca de idiomas -->
     <script>
-        const languageSelect = document.getElementById('language-select');
-        const elementsToTranslate = document.querySelectorAll('[data-lang]');
+        function toggleDropdown() {
+            const dropdown = document.getElementById('flagDropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
 
-        languageSelect.addEventListener('change', (event) => {
-            const selectedLanguage = event.target.value;
+        function changeLanguage(lang, element) {
+            const translations = {
+                'es': {
+                    'site-title': "Bienvenido a VC TechWorks",
+                    'about-title': "Sobre Nosotros",
+                    'navbar-in': "Inicio",
+                    'navbar-serv': "Servicios",
+                    'navbar-cont': "Contacto",
+                    'about-title-bnn': "Bienvenido a VC TechWorks",
+                    'about-content-bnn': "Su solución completa para mantenimiento y reparación de notebooks y computadoras en Valladolid.",
+                    'about-content': "Somos una empresa especializada en asistencia técnica para computadores de escritorio y notebooks, ofreciendo soluciones completas para reparación, mantenimiento y optimización de dispositivos. Nuestro equipo altamente calificado trabaja con las tecnologías más avanzadas del mercado para diagnosticar y resolver problemas de hardware y software con precisión y rapidez.",
+                    'services-title': "Nuestros diferenciales",
+                    'service-personalized': "Servicio Personalizado – Diagnóstico preciso y soluciones adaptadas a las necesidades de cada cliente.",
+                    'service-fast': "Servicio rápido y eficiente – Trabajamos con plazos ajustados para minimizar el tiempo de inactividad de su equipo.",
+                    'service-repairs': "Reparaciones de Software – Actualizamos memoria y SSD, formateamos, instalamos sistemas operativos y más.",
+                    'service-data-recovery': "Recuperación de datos – Soluciones avanzadas para recuperar archivos perdidos o dañados.",
+                    'service-virus-removal': "Eliminación de virus y seguridad digital – Protección contra amenazas cibernéticas, malware y ataques que podrían comprometer sus datos.",
+                    'service-preventive': "Mantenimiento Preventivo – Evite problemas futuros con limpieza interna, cambios de pasta térmica y optimización del sistema.",
+                    'service-support': "Soporte Residencial y Empresarial – Soporte técnico en sitio para mayor comodidad, ya sea para usuarios domésticos o empresas.",
+                    'service-guarantee': "Garantía de servicio – Trabajamos con transparencia y ofrecemos garantía por todos los servicios prestados.",
+                    'info': "Descubra más en el área de Servicios y Contacto.",
+                    'info-serv': "Servicios",
+                    'info-cont': "Contacto",
+                    'footer-copyright': "VC TechWorks © 2025. | ®Todos los derechos reservados."
+                },
+                'us': {
+                    'site-title': "Welcome to VC TechWorks",
+                    'about-title': "About Us",
+                    'navbar-in': "Home",
+                    'navbar-serv': "Services",
+                    'navbar-cont': "Contact",
+                    'about-title-bnn': "Welcome to VC TechWorks",
+                    'about-content-bnn': "Your complete solution for maintenance and repair of notebooks and computers in Valladolid.",
+                    'about-content': "We are a company specialized in technical assistance for desktop computers and notebooks, offering complete solutions for repair, maintenance and optimization of devices. Our highly qualified team works with the most advanced technologies on the market to diagnose and solve hardware and software problems with precision and agility.",
+                    'services-title': "Our differentials",
+                    'service-personalized': "Personalized Service – Accurate diagnosis and tailored solutions to meet the needs of each client.",
+                    'service-fast': "Fast and Efficient Service – We work with short deadlines to minimize downtime of your equipment.",
+                    'service-repairs': "Software Repairs – We memory and SSD upgrades, formatting, operating system installations and more.",
+                    'service-data-recovery': "Data Recovery – Advanced solutions for recovering lost or corrupted files.",
+                    'service-virus-removal': "Virus Removal and Digital Security – Protection against cyber threats, malware and attacks that could compromise your data.",
+                    'service-preventive': "Preventative Maintenance – Avoid future problems with internal cleaning, thermal paste changes and system optimization.",
+                    'service-support': "Residential and Business Service – On-site technical support for greater convenience, whether for home users or businesses.",
+                    'service-guarantee': "Service Guarantee – We work with transparency and offer a guarantee for all services provided.",
+                    'info': "Find out more in the Services and Contact area.",
+                    'info-serv': "Services",
+                    'info-cont': "Contact",
+                    'footer-copyright': "VC TechWorks © 2025. | ®All rights reserved."
+                },
+                'br': {
+                    'site-title': "Bem-vindo à VC TechWorks",
+                    'about-title': "Sobre Nós",
+                    'navbar-in': "Início",
+                    'navbar-serv': "Serviços",
+                    'navbar-cont': "Contato",
+                    'about-title-bnn': "Bem-vindo à VC TechWorks",
+                    'about-content-bnn': "Sua solução completa para manutenção e reparação de notebooks e computadores em Valladolid",
+                    'about-content': "Somos uma empresa especializada em assistência técnica para computadores de mesa e notebooks, oferecendo soluções completas para reparo, manutenção e otimização de dispositivos. Nossa equipe altamente qualificada trabalha com as tecnologias mais avançadas do mercado para diagnosticar e resolver problemas de hardware e software com precisão e agilidade.",
+                    'services-title': "Nossos diferenciais",
+                    'service-personalized': "Atendimento Personalizado – Diagnóstico preciso e soluções sob medida para atender às necessidades de cada cliente.",
+                    'service-fast': "Serviço Rápido e Eficiente – Trabalhamos com prazos reduzidos para minimizar o tempo de inatividade do seu equipamento.",
+                    'service-repairs': "Reparos em Software – Upgrades de memória e SSD, formatação, instalação de sistemas operacionais e mais.",
+                    'service-data-recovery': "Recuperação de Dados – Soluções avançadas para recuperação de arquivos perdidos ou corrompidos.",
+                    'service-virus-removal': "Remoção de Vírus e Segurança Digital – Proteção contra ameaças cibernéticas, malware e ataques que possam comprometer seus dados.",
+                    'service-preventive': "Manutenção Preventiva – Evite problemas futuros com limpezas internas, trocas de pasta térmica e otimização do sistema.",
+                    'service-support': "Atendimento Residencial e Empresarial – Suporte técnico no local para maior comodidade, seja para usuários domésticos ou empresas.",
+                    'service-guarantee': "Garantia de Serviço – Trabalhamos com transparência e oferecemos garantia para todos os serviços prestados.",
+                    'info': "Obtenha mais informações na área de Serviços e Contato.",
+                    'info-serv': "Serviços",
+                    'info-cont': "Contato",
+                    'footer-copyright': "VC TechWorks © 2025. | ®Todos os direitos reservados."
+                },
+                'pt': {
+                    'site-title': "Bem-vindo à VC TechWorks",
+                    'about-title': "Sobre Nós",
+                    'navbar-in': "Início",
+                    'navbar-serv': "Serviços",
+                    'navbar-cont': "Contacto",
+                    'about-title-bnn': "Bem-vindo à VC TechWorks",
+                    'about-content-bnn': "Sua solução completa para manutenção e reparação de notebooks e computadores em Valladolid",
+                    'about-content': "Somos uma empresa especializada em assistência técnica a computadores de secretária e portáteis, oferecendo soluções completas para reparação, manutenção e otimização de dispositivos. A nossa equipa altamente qualificada trabalha com as tecnologias mais avançadas do mercado para diagnosticar e resolver problemas de hardware e software com precisão e agilidade.",
+                    'services-title': "Os nossos diferenciais",
+                    'service-personalized': "Atendimento Personalizado – Diagnóstico preciso e soluções à medida para ir ao encontro das necessidades de cada cliente.",
+                    'service-fast': "Serviço Rápido e Eficiente – Trabalhamos com prazos reduzidos para minimizar o tempo de paragem do seu equipamento.",
+                    'service-repairs': "Reparações em Software – Ugrades de memória e SSD, formatação, instalação de sistemas operativos e mais.",
+                    'service-data-recovery': "Recuperação de Dados – Soluções avançadas para recuperação de ficheiros perdidos ou corrompidos.",
+                    'service-virus-removal': "Remoção de Vírus e Segurança Digital – Proteção contra ciberameaças, malware e ataques que possam comprometer os seus dados.",
+                    'service-preventive': "Manutenção Preventiva – Evite problemas futuros com limpezas internas, trocas de pasta térmica e otimização do sistema.",
+                    'service-support': "Serviço Residencial e Empresarial – Suporte técnico no local para maior comodidade, seja para utilizadores domésticos ou empresas.",
+                    'service-guarantee': "Garantia de Serviço – Trabalhamos com transparência e oferecemos garantia para todos os serviços prestados.",
+                    'info': "Obtenha mais informações na área de Serviços e Contacto.",
+                    'info-serv': "Serviços",
+                    'info-cont': "Contacto",
+                    'footer-copyright': "VC TechWorks © 2025. | ®Todos os direitos reservados."
+                }
+            };
 
-            elementsToTranslate.forEach(element => {
-                if (element.getAttribute('data-lang') === selectedLanguage) {
-                    element.style.display = 'block'; // Exibe o elemento correspondente ao idioma
-                } else {
-                    element.style.display = 'none'; // Oculta os elementos de outros idiomas
+            // Atualiza todas as traduções
+            const translationKeys = Object.keys(translations[lang]);
+            translationKeys.forEach(key => {
+                if (document.getElementById(key)) {
+                    document.getElementById(key).innerText = translations[lang][key];
                 }
             });
-        });
 
-        // Inicializar com o idioma padrão (espanhol)
-        window.addEventListener('load', () => {
-            languageSelect.value = 'es';
-            elementsToTranslate.forEach(element => {
-                if (element.getAttribute('data-lang') !== 'es') {
-                    element.style.display = 'none';
-                } else {
-                    element.style.display = 'block';
-                }
-            });
+            // Atualiza a bandeira selecionada
+            document.getElementById('selectedFlag').src = element.src;
+
+            // Fecha o dropdown
+            document.getElementById('flagDropdown').style.display = 'none';
+        }
+
+        // Fecha o dropdown ao clicar fora
+        document.addEventListener('click', function (event) {
+            const selector = document.querySelector('.language-selector');
+            if (!selector.contains(event.target)) {
+                document.getElementById('flagDropdown').style.display = 'none';
+            }
         });
     </script>
 </body>
