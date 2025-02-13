@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VC TechWorks</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/image/logo.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!--Seletor de idiomas-->
+    <div class="language-selector">
+        <img id="selectedFlag" src="https://flagcdn.com/w40/es.png" alt="Espanhol" class="selected-flag"
+            onclick="toggleDropdown()">
+
+        <div id="flagDropdown" class="flag-dropdown">
+            <img src="https://flagcdn.com/w40/es.png" alt="Espanhol" onclick="changeLanguage('es', this)">
+            <img src="https://flagcdn.com/w40/us.png" alt="Inglês" onclick="changeLanguage('us', this)">
+            <img src="https://flagcdn.com/w40/br.png" alt="Português BR" onclick="changeLanguage('br', this)">
+            <img src="https://flagcdn.com/w40/pt.png" alt="Português PT" onclick="changeLanguage('pt', this)">
+        </div>
+    </div>
+
+
+    <!-- Cabeçalho -->
+    <header>
+
+        <div class="header">
+
+            <!--Logo da Empresa-->
+            <a class="site-header" href="index.html">
+                <img src="assets/image/LogoMarca-original.ico" alt="Logo de VC TechWorks" title="VC TechWorks">
+            </a>
+
+            <!--Navegação-->
+            <nav class="navbar">
+                <a id="navbar-in" href="index.html">Inicio</a>
+                <a id="navbar-serv" href="servicios.html">Servicios</a>
+                <a id="navbar-cont" href="contacto.html">Contacto</a>
+            </nav>
+
+    </header>
+
+    <!-- Conteúdo Principal - Banner -->
+    <section class="hero-section">
+        <div>
+            <h2 id="about-title-bnn">Bienvenido a VC TechWorks</h2>
+            <p id="about-content-bnn">Su solución completa para mantenimiento y reparación de notebooks y computadoras
+                en Valladolid.</p>
+        </div>
+    </section>
+
+    <!--Sobre Nossos serviços-->
+
+    <div class="about-section" class="content">
+        <h2 id="about-title">Nuestros Servicios</h2>
+        <p id="about-content">En nuestros servicios utilizamos soluciones innovadoras y personalizadas para usted.
+            Ayudamos a diseñar soluciones para aumentar su productividad, mejorando el rendimiento desde su dispositivo.
+        </p>
+
+        <!--Tipos de serviços-->
+
+        <h3 class="servico" id="services-title">Servicios de Computadoras y Notebooks</h3>
+        <ul class="servico-list" id="services-list">
+
+            <h3>Instalación y configuración</h3>
+            <li id="service-personalized">Instalación del sistema operativo (Windows y Linux).</li>
+            <li id="service-fast">Configuración inicial del sistema operativo.</li>
+            <li id="service-repairs">Instalación de controladores y actualizaciones.</li>
+            <li id="service-data-recovery">Configuración de cuenta de usuario.</li>
+        </ul>
+
+        <ul class="servico-list" id="services-list">
+
+            <h3>Software y aplicaciones</h3>
+            <li id="service-personalized">Instalación de navegadores (Google Chrome, Mozilla Firefox, Microsoft Edge,
+                etc.).</li>
+            <li id="service-fast">Configuración inicial del sistema operativo.</li>
+            <li id="service-repairs">Instalación de antivirus (Avast, Kaspersky, Windows Defender, etc.).</li>
+            <li id="service-data-recovery">Instalación de suites de productividad (Microsoft Office, LibreOffice, Google
+                Workspace, etc.).</li>
+            <li id="service-virus-removal">Instalación de utilidades (WinRAR, CCleaner, TeamViewer, etc.).</li>
+            <li id="service-support">Instalación de juegos y software específicos solicitados por el cliente.</li>
+
+        </ul>
+
+        <ul class="servico-list" id="services-list">
+
+            <h3>Configuraciones específicas</h3>
+            <li id="service-personalized">Configuración de cuenta de correo electrónico en Outlook.</li>
+            <li id="service-fast">Configuración de red de área local (LAN) e inalámbrica (Wi-Fi).</li>
+            <li id="service-repairs">Configuración de impresora y escáner (USB, Wi-Fi, Bluetooth).</li>
+
+        </ul>
+
+        <ul class="servico-list" id="services-list">
+
+            <h3>Mantenimiento y Optimización</h3>
+            <li id="service-personalized">Limpieza de malware, virus y spyware.</li>
+            <li id="service-fast">Optimización del rendimiento del ordenador.</li>
+            <li id="service-repairs">Desfragmentación del disco duro.</li>
+            <li id="service-data-recovery">Borrar archivos temporales y caché.</li>
+            <li id="service-virus-removal">Comprobación y corrección de errores de disco (chkdsk).</li>
+            <li id="service-support">Actualización de controladores y firmware.</li>
+
+        </ul>
+
+        <ul class="servico-list" id="services-list">
+
+            <h3>Copia de seguridad y recuperación</h3>
+            <li id="service-personalized">Creación de copias de seguridad de datos importantes.</li>
+            <li id="service-fast">Recuperación de archivos perdidos o dañados.</li>
+            <li id="service-repairs">Clonación de disco duro.</li>
+
+
+        </ul>
+
+        <ul class="servico-list" id="services-list">
+
+            <h3>Solución de problemas</h3>
+            <li id="service-personalized">Diagnóstico y reparación de problemas de hardware (sólo relacionados con el
+                software).</li>
+            <li id="service-fast">Reparar errores del sistema operativo (por ejemplo, pantalla azul, fallos).</li>
+
+        </ul>
+
+    </div>
+
+    <!--Ver serviços e contatos-->
+
+    <div class="container-servicos-contatos">
+        <h2 id="info">Descubra más en el área de Sobre Nosotros y Contacto.</h2>
+
+        <div class="botoes-servicos-contatos">
+            <a id="info-in" href="index.html">Sobre Nosotros</a>
+            <a id="info-cont" href="contacto.html">Contacto</a>
+        </div>
+    </div>
+
+
+    <!-- Rodapé -->
+    <footer>
+        <p id="footer-copyright">VC TechWorks © 2025. | ®Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById('flagDropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function changeLanguage(lang, element) {
+            const translations = {
+                'es': {
+                    'site-title': "Bienvenido a VC TechWorks",
+                    'about-title': "Sobre Nosotros",
+                    'navbar-in': "Inicio",
+                    'navbar-serv': "Servicios",
+                    'navbar-cont': "Contacto",
+                    'about-title-bnn': "Bienvenido a VC TechWorks",
+                    'about-content-bnn': "Su solución completa para mantenimiento y reparación de notebooks y computadoras en Valladolid.",
+                    'about-content': "Nuestros servicios Utilizamos soluciones innovadoras para usted y diseñamos el futuro de su negocio. Ayudamos a diseñar soluciones para aumentar su productividad, mejorando el rendimiento. desde su dispositivo.",
+                    'services-title': "Nuestros diferenciales",
+                    'service-personalized': "Servicio Personalizado – Diagnóstico preciso y soluciones adaptadas a las necesidades de cada cliente.",
+                    'service-fast': "Servicio rápido y eficiente – Trabajamos con plazos ajustados para minimizar el tiempo de inactividad de su equipo.",
+                    'service-repairs': "Reparaciones de Software – Actualizamos memoria y SSD, formateamos, instalamos sistemas operativos y más.",
+                    'service-data-recovery': "Recuperación de datos – Soluciones avanzadas para recuperar archivos perdidos o dañados.",
+                    'service-virus-removal': "Eliminación de virus y seguridad digital – Protección contra amenazas cibernéticas, malware y ataques que podrían comprometer sus datos.",
+                    'service-preventive': "Mantenimiento Preventivo – Evite problemas futuros con limpieza interna, cambios de pasta térmica y optimización del sistema.",
+                    'service-support': "Soporte Residencial y Empresarial – Soporte técnico en sitio para mayor comodidad, ya sea para usuarios domésticos o empresas.",
+                    'service-guarantee': "Garantía de servicio – Trabajamos con transparencia y ofrecemos garantía por todos los servicios prestados.",
+                    'info': "Descubra más en el área de Servicios y Contacto.",
+                    'info-in': "Sobre Nosotros",
+                    'info-serv': "Servicios",
+                    'info-cont': "Contacto",
+                    'footer-copyright': "VC TechWorks © 2025. | ®Todos los derechos reservados."
+                },
+                'us': {
+                    'site-title': "Welcome to VC TechWorks",
+                    'about-title': "About Us",
+                    'navbar-in': "Home",
+                    'navbar-serv': "Services",
+                    'navbar-cont': "Contact",
+                    'about-title-bnn': "Welcome to VC TechWorks",
+                    'about-content-bnn': "Your complete solution for maintenance and repair of notebooks and computers in Valladolid.",
+                    'about-content': "We are a company specialized in technical assistance for desktop computers and notebooks, offering complete solutions for repair, maintenance and optimization of devices. Our highly qualified team works with the most advanced technologies on the market to diagnose and solve hardware and software problems with precision and agility.",
+                    'services-title': "Our differentials",
+                    'service-personalized': "Personalized Service – Accurate diagnosis and tailored solutions to meet the needs of each client.",
+                    'service-fast': "Fast and Efficient Service – We work with short deadlines to minimize downtime of your equipment.",
+                    'service-repairs': "Software Repairs – We memory and SSD upgrades, formatting, operating system installations and more.",
+                    'service-data-recovery': "Data Recovery – Advanced solutions for recovering lost or corrupted files.",
+                    'service-virus-removal': "Virus Removal and Digital Security – Protection against cyber threats, malware and attacks that could compromise your data.",
+                    'service-preventive': "Preventative Maintenance – Avoid future problems with internal cleaning, thermal paste changes and system optimization.",
+                    'service-support': "Residential and Business Service – On-site technical support for greater convenience, whether for home users or businesses.",
+                    'service-guarantee': "Service Guarantee – We work with transparency and offer a guarantee for all services provided.",
+                    'info': "Find out more in the Services and Contact area.",
+                    'info-in': "About Us",
+                    'info-serv': "Services",
+                    'info-cont': "Contact",
+                    'footer-copyright': "VC TechWorks © 2025. | ®All rights reserved."
+                },
+                'br': {
+                    'site-title': "Bem-vindo à VC TechWorks",
+                    'about-title': "Sobre Nós",
+                    'navbar-in': "Início",
+                    'navbar-serv': "Serviços",
+                    'navbar-cont': "Contato",
+                    'about-title-bnn': "Bem-vindo à VC TechWorks",
+                    'about-content-bnn': "Sua solução completa para manutenção e reparação de notebooks e computadores em Valladolid",
+                    'about-content': "Somos uma empresa especializada em assistência técnica para computadores de mesa e notebooks, oferecendo soluções completas para reparo, manutenção e otimização de dispositivos. Nossa equipe altamente qualificada trabalha com as tecnologias mais avançadas do mercado para diagnosticar e resolver problemas de hardware e software com precisão e agilidade.",
+                    'services-title': "Nossos diferenciais",
+                    'service-personalized': "Atendimento Personalizado – Diagnóstico preciso e soluções sob medida para atender às necessidades de cada cliente.",
+                    'service-fast': "Serviço Rápido e Eficiente – Trabalhamos com prazos reduzidos para minimizar o tempo de inatividade do seu equipamento.",
+                    'service-repairs': "Reparos em Software – Upgrades de memória e SSD, formatação, instalação de sistemas operacionais e mais.",
+                    'service-data-recovery': "Recuperação de Dados – Soluções avançadas para recuperação de arquivos perdidos ou corrompidos.",
+                    'service-virus-removal': "Remoção de Vírus e Segurança Digital – Proteção contra ameaças cibernéticas, malware e ataques que possam comprometer seus dados.",
+                    'service-preventive': "Manutenção Preventiva – Evite problemas futuros com limpezas internas, trocas de pasta térmica e otimização do sistema.",
+                    'service-support': "Atendimento Residencial e Empresarial – Suporte técnico no local para maior comodidade, seja para usuários domésticos ou empresas.",
+                    'service-guarantee': "Garantia de Serviço – Trabalhamos com transparência e oferecemos garantia para todos os serviços prestados.",
+                    'info': "Obtenha mais informações na área de Serviços e Contato.",
+                    'info-in': "Sobre Nós",
+                    'info-serv': "Serviços",
+                    'info-cont': "Contato",
+                    'footer-copyright': "VC TechWorks © 2025. | ®Todos os direitos reservados."
+                },
+                'pt': {
+                    'site-title': "Bem-vindo à VC TechWorks",
+                    'about-title': "Sobre Nós",
+                    'navbar-in': "Início",
+                    'navbar-serv': "Serviços",
+                    'navbar-cont': "Contacto",
+                    'about-title-bnn': "Bem-vindo à VC TechWorks",
+                    'about-content-bnn': "Sua solução completa para manutenção e reparação de notebooks e computadores em Valladolid",
+                    'about-content': "Somos uma empresa especializada em assistência técnica a computadores de secretária e portáteis, oferecendo soluções completas para reparação, manutenção e otimização de dispositivos. A nossa equipa altamente qualificada trabalha com as tecnologias mais avançadas do mercado para diagnosticar e resolver problemas de hardware e software com precisão e agilidade.",
+                    'services-title': "Os nossos diferenciais",
+                    'service-personalized': "Atendimento Personalizado – Diagnóstico preciso e soluções à medida para ir ao encontro das necessidades de cada cliente.",
+                    'service-fast': "Serviço Rápido e Eficiente – Trabalhamos com prazos reduzidos para minimizar o tempo de paragem do seu equipamento.",
+                    'service-repairs': "Reparações em Software – Ugrades de memória e SSD, formatação, instalação de sistemas operativos e mais.",
+                    'service-data-recovery': "Recuperação de Dados – Soluções avançadas para recuperação de ficheiros perdidos ou corrompidos.",
+                    'service-virus-removal': "Remoção de Vírus e Segurança Digital – Proteção contra ciberameaças, malware e ataques que possam comprometer os seus dados.",
+                    'service-preventive': "Manutenção Preventiva – Evite problemas futuros com limpezas internas, trocas de pasta térmica e otimização do sistema.",
+                    'service-support': "Serviço Residencial e Empresarial – Suporte técnico no local para maior comodidade, seja para utilizadores domésticos ou empresas.",
+                    'service-guarantee': "Garantia de Serviço – Trabalhamos com transparência e oferecemos garantia para todos os serviços prestados.",
+                    'info': "Obtenha mais informações na área de Serviços e Contacto.",
+                    'info-in': "Sobre nós",
+                    'info-serv': "Serviços",
+                    'info-cont': "Contacto",
+                    'footer-copyright': "VC TechWorks © 2025. | ®Todos os direitos reservados."
+                }
+            };
+
+            // Atualiza todas as traduções
+            const translationKeys = Object.keys(translations[lang]);
+            translationKeys.forEach(key => {
+                if (document.getElementById(key)) {
+                    document.getElementById(key).innerText = translations[lang][key];
+                }
+            });
+
+            // Atualiza a bandeira selecionada
+            document.getElementById('selectedFlag').src = element.src;
+
+            // Fecha o dropdown
+            document.getElementById('flagDropdown').style.display = 'none';
+        }
+
+        // Fecha o dropdown ao clicar fora
+        document.addEventListener('click', function (event) {
+            const selector = document.querySelector('.language-selector');
+            if (!selector.contains(event.target)) {
+                document.getElementById('flagDropdown').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
