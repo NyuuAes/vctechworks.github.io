@@ -1,197 +1,347 @@
-/* Reset Geral */
+/*Estilos da página*/
+/*------------------------------------------------------------*/
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
+
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #d6851b;
+    font-family: Arial, Helvetica, sans-serif;
+    /*line-height: 1.6;*/
+    background-color: #082946;
+    color: #ffffff;
+
+}
+
+/*------------------------------------------------------------*/
+
+/*Geral*/
+
+.text-center {
+    text-align: center;
+}
+
+.margin-top-40 {
+    margin-top: 40px;
+}
+
+/*------------------------------------------------------------*/
+
+/*Cabeçalho*/
+.header {
     background-color: #040404;
-}
-
-/* Container Geral */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Estilo do Header */
-.site-header {
-    background-color: #040404;
-    color: #fff;
-    padding: 1rem 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.site-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 20px;
+    text-align: center;
 }
 
 .site-header img {
-    max-width: 100px;
+    max-width: 150px;
     height: auto;
 }
 
-.navbar {
-    display: flex;
-    gap: 10px;
+/*------------------------------------------------------------*/
+
+/*Seletor de idiomas*/
+.language-selector {
+    position: absolute;
+    display: inline-block;
+    top: 50px;
+    /*Define a distancia do topo*/
+    right: 80px;
+    /*Adiciona espaçamento da margem direitra*/
+    text-align: right;
 }
 
-.navbar a {
+.selected-flag {
+    width: 40px;
+    cursor: pointer;
+}
+
+.flag-dropdown {
     display: none;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.flag-dropdown img {
+    width: 40px;
+    display: block;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+/*------------------------------------------------------------*/
+
+/*Navegação*/
+.navbar a {
+    display: inline;
+    margin: 0 50px;
+    /*gap: 10px;*/
     color: #d6851b;
     text-decoration: none;
+    font-size: 1.3em;
     font-weight: bold;
 }
 
-.navbar a[data-lang="es"] {
-    /*display: table-column;*/
-    display: list-item;
+.navbar a:hover {
+    color: aqua;
 }
 
-/* Estilo do Banner Principal */
+/*.navbar a {
+    display: inline-block;
+    color: #d6851b;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: bold;
+
+}*/
+
+/*------------------------------------------------------------*/
+
+/*Banner principal*/
 .hero-section {
-    background-color: #13b1d5;
-    color: #040404;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #061f35;
+    color: #81c4ff;
     text-align: center;
-    padding: 3rem 2.5rem;
-    /*padding: 1.5rem 0.6rem;*/
-    margin-top: 100px;
+    padding: 2rem 1.5rem;
 }
-
 
 .hero-section h2 {
-    font-size: 1rem;
-    margin-bottom: 15px;
+    font-size: 2em;
 }
 
 .hero-section p {
-    font-size: 0.8rem;
+    font-size: 1.2em;
+
 }
 
-/* Sobre Nosotros */
+/*------------------------------------------------------------*/
+
+/*Conteúdo da página - Sobre nós*/
+.content {
+    padding: 10px;
+    text-align: center;
+
+}
+
 .about-section {
-    background-color: #1a80a7;
-    /*background: linear-gradient(#191c37, #1a80a7);*/
-    margin: 0px auto;
+    background-color: #082946;
+    margin: 0 auto;
     width: 100%;
-    /*text-align: justify;*/
+
 }
 
 .about-section h2 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 2em;
-    color: #fff;
-    text-align: center;
+    color: #81c4ff;
+    margin: 0px;
 }
 
 .about-section p {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 40px;
-    font-size: 1em;
-    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 20px;
+    font-size: 1.2em;
+    color: #81c4ff;
     overflow: auto;
     text-align: justify;
 }
 
+
+/*------------------------------------------------------------*/
+
+/*Diferênciais */
+
 .diferenciais {
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    font-size: 0.5em;
+    font-size: 2em;
     margin: 15px auto;
     width: 100%;
+    color: #81c4ff;
 }
 
+
 .diferenciais-list {
+    font-family: 'Courier New', Courier, monospace;
     list-style-type: none;
     padding-left: 0;
     padding: 30px;
     text-align: start;
 }
 
+.diferenciais-list h3 {
+    margin: 17px;
+}
+
 .diferenciais-list li {
     margin-bottom: 8px;
-    font-size: 15px;
+    font-size: 1.2em;
     line-height: auto;
-    color: #fff;
+    color: #81c4ff;
+
+    /*Ajuste do simbolo check*/
+    position: relative;
+    padding-left: 30px;
+    /*Espaço para o ícone*/
 }
 
 .diferenciais-list li::before {
-    content: "✅";
+    /*content: "✅";*/
+    /*margin-right: 10px;*/
+
+    /*Ajuste do simbolo check*/
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #061f35;
+    /*Cor do fundo*/
+    border-radius: 50%;
+    /*Cria um círculo*/
     margin-right: 10px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
 }
 
-/* Footer */
-.site-footer {
-    background-color: #040404;
-    color: #fff;
+.diferenciais-list li::after {
+    content: "✔";
+    /*Símbolo de check*/
+    color: #d6851b;
+    /*Cor do check*/
+    font-size: 14px;
+    position: absolute;
+    left: 5px;
+    /*Centraliza o check no círculo*/
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*------------------------------------------------------------*/
+
+/*Nossos Serviços*/
+
+.servico {
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    padding: 20px 0;
+    font-size: 1.6em;
+    margin: 10px auto;
+    width: 100%;
+    color: #81c4ff;
 }
 
-.site-footer p {
-    margin: 0;
-    font-size: 0.9rem;
+.servico-list {
+    font-family: 'Courier New', Courier, monospace;
+    list-style-type: none;
+    float: center;
+    margin: 10px auto;
+    background-color: #061f35;
+    width: 90%;
+    padding-left: 0;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
 }
 
-/* Seletor de Idiomas */
-.language-selector {
-    margin-left: 70%;
-    background-color: #040404;
+.servico-list h3 {
+    margin: 10px;
+}
+
+.servico-list li {
+    margin-bottom: 8px;
+    font-size: 1.2em;
+    line-height: auto;
+    color: #81c4ff;
+
+    /*Ajuste do simbolo check*/
+    position: relative;
+    padding-left: 30px;
+    /*Espaço para o ícone*/
+}
+
+.servico-list li::before {
+    /*Ajuste do simbolo check*/
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #061f35;
+    /*Cor do fundo*/
+    border-radius: 50%;
+    /*Cria um círculo*/
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.servico-list li::after {
+    content: "✔";
+    /*Símbolo de check*/
+    color: #d6851b;
+    /*Cor do check*/
+    font-size: 14px;
+    position: absolute;
+    left: 5px;
+    /*Centraliza o check no círculo*/
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/*------------------------------------------------------------*/
+
+/*Serviços e contatos*/
+.container-servicos-contatos {
+    background-color: #061f35;
+    padding: 15px;
+    text-align: center;
+    color: #81c4ff;
+}
+
+.container-servicos-contatos .botoes-servicos-contatos {
+    padding: 20px;
+    text-align: center;
+}
+
+.botoes-servicos-contatos a {
+    display: block;
+    max-width: 150px;
+    text-decoration: none;
+    font-size: 1.2em;
+    background-color: #008eb9;
     color: #fff;
+    padding: 15px 60px;
+    margin: 15px auto;
+    border-radius: 10px;
 }
 
-.language-selector select {
-    margin: 0px;
-    padding: 0px;
-    border-radius: 5px;
-    border: 1.5px solid #ccc;
-    background-color: #efe1d5;
-    color: #333;
-    font-size: 0.7rem;
+.botoes-servicos-contatos a:hover {
+    background-color: #fff;
+    color: #040404;
 }
 
-@media (max-width: 1200px) {
-    .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+/*------------------------------------------------------------*/
 
-    .navbar {
-        flex-direction: row;
-        gap: 10px;
-    }
-
-    .hero-section {
-        margin-top: 150px;
-    }
-
-    .about-section h2 {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-    }
-
-    .about-section p {
-        font-size: 0.9rem;
-    }
-
-    .diferenciais-list {
-        padding: 15px;
-    }
-
-    .diferenciais-list li {
-        font-size: 14px;
-    }
+/*Rodapé*/
+footer {
+    background-color: #040404;
+    color: #d6851b;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 0px;
 }
+
+/*------------------------------------------------------------*/
