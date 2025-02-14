@@ -80,7 +80,7 @@ body {
 
 /*Navegação*/
 .navbar a {
-    display: inline;
+    display: inline-block;
     margin: 0 50px;
     /*gap: 10px;*/
     color: #d6851b;
@@ -142,7 +142,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     font-size: 2em;
     color: #81c4ff;
-    margin: 0px;
+    margin: 10px;
 }
 
 .about-section p {
@@ -234,8 +234,9 @@ body {
 .servico {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    font-size: 1.6em;
-    margin: 10px auto;
+    font-size: 1.2em;
+    margin: 50px auto;
+    padding: 10px;
     width: 100%;
     color: #81c4ff;
 }
@@ -254,7 +255,25 @@ body {
 }
 
 .servico-list h3 {
-    margin: 10px;
+    margin: 15px;
+    text-align: left;
+
+}
+
+.servico a {
+
+    background-color: #061f35;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 0;
+    padding: 5px;
+    margin-top: 10px;
+
+}
+
+.servico a:hover {
+    color: aqua;
+
 }
 
 .servico-list li {
@@ -262,7 +281,6 @@ body {
     font-size: 1.2em;
     line-height: auto;
     color: #81c4ff;
-
     /*Ajuste do simbolo check*/
     position: relative;
     padding-left: 30px;
@@ -318,7 +336,7 @@ body {
 
 .botoes-servicos-contatos a {
     display: block;
-    max-width: 150px;
+    max-width: 200px;
     text-decoration: none;
     font-size: 1.2em;
     background-color: #008eb9;
