@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VC TechWorks - Celulares y Tablets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="assets/image/logo.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!--Seletor de idiomas-->
+    <div class="language-selector">
+        <img id="selectedFlag" src="https://flagcdn.com/w40/es.png" alt="Espanhol" class="selected-flag"
+            onclick="toggleDropdown()">
+
+        <div id="flagDropdown" class="flag-dropdown">
+            <img src="https://flagcdn.com/w40/es.png" alt="Espanhol" onclick="changeLanguage('es', this)">
+            <img src="https://flagcdn.com/w40/us.png" alt="Inglês" onclick="changeLanguage('us', this)">
+            <img src="https://flagcdn.com/w40/br.png" alt="Português BR" onclick="changeLanguage('br', this)">
+            <img src="https://flagcdn.com/w40/pt.png" alt="Português PT" onclick="changeLanguage('pt', this)">
+        </div>
+    </div>
+
+
+    <!-- Cabeçalho -->
+    <header>
+
+        <div class="header">
+
+            <!--Logo da Empresa-->
+            <a class="site-header" href="index.html">
+                <img src="assets/image/LogoMarca-original.ico" alt="Logo de VC TechWorks" title="VC TechWorks">
+            </a>
+
+            <!--Navegação-->
+            <nav class="navbar">
+                <a id="navbar-in" href="index.html">Inicio</a>
+                <a id="navbar-serv" href="servicios.html">Servicios</a>
+                <a id="navbar-cont" href="contacto.html">Contacto</a>
+            </nav>
+
+    </header>
+
+
+    <!-- Tipos de serviços -->
+    <h3 class="servico">
+        <a id="services-title" href="servicios.html">| Computadoras y Notebooks |</a>
+        <a id="services-title" href="mobile.html">| Celulares y Tablets |</a>
+        <a id="services-title" href="adicionales.html">| Servicios adicionales |</a>
+
+    </h3>
+
+
+    <ul class="servico-list" id="services-list">
+
+        <h3 id="title-transfer">Transferencia de datos</h3>
+        <li id="service-transfer">Transferencia de datos entre teléfonos celulares (antiguos a nuevos).</li>
+        <li id="service-copy">Realice copias de seguridad y restaure fotos, vídeos, contactos, mensajes y aplicaciones.
+        </li>
+    </ul>
+
+    <ul class="servico-list" id="services-list">
+        <h3 id="title-cleaning">Limpieza y optimización</h3>
+        <li id="service-clean-disk">Limpieza del almacenamiento interno (eliminación de archivos innecesarios).</li>
+        <li id="service-del-cache">Borrar caché y datos de la aplicación.</li>
+        <li id="service-optim">Optimizar el rendimiento del dispositivo.</li>
+    </ul>
+
+    <ul class="servico-list" id="services-list">
+        <h3 id="title-configuracion">Configuración</h3>
+        <li id="service-email">Configuración de cuentas de correo electrónico (Gmail, Outlook, Yahoo, etc).</li>
+        <li id="service-sincron">Configuración de sincronización de cuentas (Google Drive, iCloud, OneDrive, etc).</li>
+        <li id="service-copy-security">Configuración de copia de seguridad automática (Google Photos, iCloud, etc.).
+        </li>
+    </ul>
+
+    <ul class="servico-list" id="services-list">
+        <h3 id="title-security">Seguridad</h3>
+        <li id="service-antivirus">Instalación y configuración de antivirus y aplicaciones de seguridad.</li>
+        <li id="service-elimi-virus">Eliminación de virus, malware y aplicaciones maliciosas.</li>
+    </ul>
+
+    <ul class="servico-list" id="services-list">
+        <h3 id="title-updates">actualizaciones y restauración</h3>
+        <li id="service-update-mobil">Actualización del sistema operativo (Android, iOS).</li>
+        <li id="service-restore-fabrica">Restablecimiento de fábrica con configuración personalizada.</li>
+    </ul>
+
+    <ul class="servico-list" id="services-list">
+        <h3 id="title-restore">Recuperación de datos</h3>
+        <li id="service-restore-del">Recuperación de archivos borrados (fotos, vídeos, documentos).</li>
+        <li id="service-restore-copy">Restaurar copias de seguridad existentes.</li>
+    </ul>
+
+    <ul class="servico-list" id="services-list">
+        <h3 id="title-personal">Personalización</h3>
+        <li id="service-interface">Personalización de la interfaz (temas, fondos de pantalla, widgets).</li>
+        <li id="service-display">Configuración de accesibilidad (lector de pantalla, zoom, etc).</li>
+    </ul>
+
+    </div>
+
+    <!--Ver serviços e contatos-->
+
+    <div class="container-servicos-contatos">
+        <h2 id="info">Descubra más en el área de Sobre Nosotros y Contacto.</h2>
+
+        <div class="botoes-servicos-contatos">
+            <a id="info-in" href="index.html">Sobre Nosotros</a>
+            <a id="info-cont" href="contacto.html">Contacto</a>
+        </div>
+    </div>
+
+
+    <!-- Rodapé -->
+    <footer>
+        <p id="footer-copyright">VC TechWorks © 2025. | ® Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById('flagDropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function changeLanguage(lang, element) {
+            const translations = {
+                'es': {
+                    'site-title': "Bienvenido a VC TechWorks",
+                    'about-title': "Sobre Nosotros",
+                    'navbar-in': "Inicio",
+                    'navbar-serv': "Servicios",
+                    'navbar-cont': "Contacto",
+
+                    'title-transfer': "Transferencia de Datos",
+                    'service-transfer': "Transferencia de datos entre teléfonos celulares (antiguos a nuevos).",
+                    'service-copy': "Realice copias de seguridad y restaure fotos, vídeos, contactos, mensajes y aplicaciones.",
+
+                    'title-cleaning': "Limpieza y Optimización",
+                    'service-clean-disk': "Limpieza del almacenamiento interno (eliminación de archivos innecesarios).",
+                    'service-del-cache': "Borrar caché y datos de las aplicaciones.",
+                    'service-optim': "Optimizar el rendimiento del dispositivo.",
+
+                    'title-configuracion': "Configuración",
+                    'service-email': "Configuración de cuentas de correo electrónico (Gmail y Outlook).",
+                    'service-sincron': "Configuración de sincronización de cuentas (Google Drive, iCloud, etc).",
+                    'service-copy-security': "Configuración de copia de seguridad automática (WhatsApp, Google Photos, etc).",
+
+                    'title-security': "Seguridad",
+                    'service-antivirus': "Instalación y configuración de antivirus y aplicaciones de seguridad.",
+                    'service-elimi-virus': "Eliminación de virus, malware y aplicaciones maliciosas.",
+
+                    'title-updates': "Actualizaciones y Restauración",
+                    'service-update-mobil': "Actualización del sistema operativo (Android y iOS).",
+                    'service-restore-fabrica': "Restablecimiento de fábrica con configuración personalizada.",
+
+                    'title-restore': "Recuperacion de Datos",
+                    'service-restore-del': "Recuperación de archivos borrados (fotos, videos y documentos).",
+                    'service-restore-copy': "Restaurar copias de seguridad existentes",
+
+                    'title-personal': "Personalización",
+                    'service-interface': "Personalización de la interfaz (temas, fondos de pantalla, widgets, etc).",
+                    'service-display': "Configuración de accesibilidad (lector de pantalla, zoom, etc).",
+
+                    'info': "Descubra más en el área de Servicios y Contacto.",
+                    'info-in': "Sobre Nosotros",
+                    'info-serv': "Servicios",
+                    'info-cont': "Contacto",
+                    'footer-copyright': "VC TechWorks © 2025. | ® Todos los derechos reservados."
+                },
+                'us': {
+                    'site-title': "Welcome to VC TechWorks",
+                    'about-title': "About Us",
+                    'navbar-in': "Home",
+                    'navbar-serv': "Services",
+                    'navbar-cont': "Contact",
+
+                    'title-transfer': "Data Transfer",
+                    'service-transfer': "Transfer data between cell phones (old to new).",
+                    'service-copy': "Backup and restore photos, videos, contacts, messages and apps",
+
+                    'title-cleaning': "Cleaning and Optimization",
+                    'service-clean-disk': "Cleaning internal storage (removing unnecessary files).",
+                    'service-del-cache': "Cleaning cache and app data.",
+                    'service-optim': "Optimizing device performance.",
+
+                    'title-configuracion': "Settings",
+                    'service-email': "Setting up email accounts (Gmail and Outlook).",
+                    'service-sincron': "Setting up account synchronization (Google Drive, iCloud, etc).",
+                    'service-copy-security': "Setting up automatic backup (Google Photos and iCloud).",
+
+                    'title-security': "Security",
+                    'service-antivirus': "Installing and configuring antivirus and security apps.",
+                    'service-elimi-virus': "Removing viruses, malware and malicious apps.",
+
+                    'title-updates': "Updates and Restore",
+                    'service-update-mobil': "Updating the operating system (Android and iOS).",
+                    'service-restore-fabrica': "Factory reset with custom settings.",
+
+                    'title-restore': "Data Recorevy",
+                    'service-restore-del': "Recovering deleted files (photos, videos and documents).",
+                    'service-restore-copy': "Restoration of existing backups.",
+
+                    'title-personal': "Personalization",
+                    'service-interface': "Customization of the interface (themes, wallpapers, widgets, etc).",
+                    'service-display': "Accessibility configuration (screen reader, zoom, etc).",
+
+
+                    'info': "Find out more in the Services and Contact area.",
+                    'info-in': "About Us",
+                    'info-serv': "Services",
+                    'info-cont': "Contact",
+                    'footer-copyright': "VC TechWorks © 2025. | ® All rights reserved."
+                },
+                'br': {
+                    'site-title': "Bem-vindo à VC TechWorks",
+                    'about-title': "Sobre Nós",
+                    'navbar-in': "Início",
+                    'navbar-serv': "Serviços",
+                    'navbar-cont': "Contato",
+
+                    'title-transfer': "Transferência de Dados",
+                    'service-transfer': "Transferência de dados entre celulares (antigo para novo).",
+                    'service-copy': "Backup e restauração de fotos, vídeos, contatos, mensagens e aplicativos.",
+
+                    'title-cleaning': "Limpeza e Otimização",
+                    'service-clean-disk': "Limpeza do armazenamento interno (remoção de arquivos desnecessários).",
+                    'service-del-cache': "Limpeza de cache e dados dos aplicativos.",
+                    'service-optim': "Otimização do desempenho do dispositivo",
+
+                    'title-configuracion': "Configurações",
+                    'service-email': "Configuração de contas de e-mail (Gmail e Outlook).",
+                    'service-sincron': "Configuração de sincronização de contas (Google Drive, iCloud, etc).",
+                    'service-copy-security': "Configuração de backup automático (Google fotos e iCloud).",
+
+                    'title-security': "Segurança",
+                    'service-antivirus': "Instalação e configuração de antivírus e apps de segurança.",
+                    'service-elimi-virus': "Remoção de vírus, malware e apps maliciosos.",
+
+                    'title-updates': "Atualizações e Restauração",
+                    'service-update-mobil': "Atualização do sistema operacional (Android e iOS).",
+                    'service-restore-fabrica': "Restauração de fábrica com configuração personalizada.",
+
+                    'title-restore': "Recuperação de Dados",
+                    'service-restore-del': "Recuperação de arquivos excluídos (fotos, vídeos e documentos).",
+                    'service-restore-copy': "Restauração de backups existentes.",
+
+                    'title-personal': "Personalização",
+                    'service-interface': "Customização de interface (temas, papel de parede, widgets).",
+                    'service-display': "Configuração de acessibilidade (leitor de tela, zoom, etc).",
+
+
+                    'info': "Obtenha mais informações na área de Serviços e Contato.",
+                    'info-in': "Sobre Nós",
+                    'info-serv': "Serviços",
+                    'info-cont': "Contato",
+                    'footer-copyright': "VC TechWorks © 2025. | ® Todos os direitos reservados."
+                },
+                'pt': {
+                    'site-title': "Bem-vindo à VC TechWorks",
+                    'about-title': "Sobre Nós",
+                    'navbar-in': "Início",
+                    'navbar-serv': "Serviços",
+                    'navbar-cont': "Contacto",
+
+                    'title-transfer': "Transferência de Dados",
+                    'service-transfer': "Transferência de dados entre celulares (antigo para novo).",
+                    'service-copy': "Backup e restauro de fotografias, vídeos, contactos, mensagens e aplicações.",
+
+                    'title-cleaning': "Limpeza e Otimização",
+                    'service-clean-disk': "Limpeza do armazenamento interno (remoção de ficheros desnecessários).",
+                    'service-del-cache': "Limpeza de cache e dados dos aplicações.",
+                    'service-optim': "Otimização do desempenho do dispositivo",
+
+                    'title-configuracion': "Configurações",
+                    'service-email': "Configuração de contas de e-mail (Gmail e Outlook).",
+                    'service-sincron': "Configuração de sincronização de contas (Google Drive, iCloud, etc).",
+                    'service-copy-security': "Configuração de còpia de segurança automática (Google fotos e iCloud).",
+
+                    'title-security': "Segurança",
+                    'service-antivirus': "Instalação e configuração de antivírus e apps de segurança.",
+                    'service-elimi-virus': "Remoção de vírus, malware e apps maliciosos.",
+
+                    'title-updates': "Atualizações e Restauração",
+                    'service-update-mobil': "Atualização do sistema operativo (Android e iOS).",
+                    'service-restore-fabrica': "Restauração de fábrica com configuração personalizada.",
+
+                    'title-restore': "Recuperação de Dados",
+                    'service-restore-del': "Recuperação de ficheros eliminados (fotos, vídeos e documentos).",
+                    'service-restore-copy': "Restauração de backups existentes.",
+
+                    'title-personal': "Personalização",
+                    'service-interface': "Personalização de interface (temas, papel de parede, widgets).",
+                    'service-display': "Configuração de acessibilidade (leitor de ecrã, zoom, etc).",
+
+
+                    'info': "Obtenha mais informações na área de Serviços e Contacto.",
+                    'info-in': "Sobre nós",
+                    'info-serv': "Serviços",
+                    'info-cont': "Contacto",
+                    'footer-copyright': "VC TechWorks © 2025. | ® Todos os direitos reservados."
+                }
+            };
+
+            // Atualiza todas as traduções
+            const translationKeys = Object.keys(translations[lang]);
+            translationKeys.forEach(key => {
+                if (document.getElementById(key)) {
+                    document.getElementById(key).innerText = translations[lang][key];
+                }
+            });
+
+            // Atualiza a bandeira selecionada
+            document.getElementById('selectedFlag').src = element.src;
+
+            // Fecha o dropdown
+            document.getElementById('flagDropdown').style.display = 'none';
+        }
+
+        // Fecha o dropdown ao clicar fora
+        document.addEventListener('click', function (event) {
+            const selector = document.querySelector('.language-selector');
+            if (!selector.contains(event.target)) {
+                document.getElementById('flagDropdown').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

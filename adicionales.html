@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VC TechWorks - Celulares y Tablets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="assets/image/logo.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <!--Seletor de idiomas-->
+    <div class="language-selector">
+        <img id="selectedFlag" src="https://flagcdn.com/w40/es.png" alt="Espanhol" class="selected-flag"
+            onclick="toggleDropdown()">
+
+        <div id="flagDropdown" class="flag-dropdown">
+            <img src="https://flagcdn.com/w40/es.png" alt="Espanhol" onclick="changeLanguage('es', this)">
+            <img src="https://flagcdn.com/w40/us.png" alt="Inglês" onclick="changeLanguage('us', this)">
+            <img src="https://flagcdn.com/w40/br.png" alt="Português BR" onclick="changeLanguage('br', this)">
+            <img src="https://flagcdn.com/w40/pt.png" alt="Português PT" onclick="changeLanguage('pt', this)">
+        </div>
+    </div>
+
+
+    <!-- Cabeçalho -->
+    <header>
+
+        <div class="header">
+
+            <!--Logo da Empresa-->
+            <a class="site-header" href="index.html">
+                <img src="assets/image/LogoMarca-original.ico" alt="Logo de VC TechWorks" title="VC TechWorks">
+            </a>
+
+            <!--Navegação-->
+            <nav class="navbar">
+                <a id="navbar-in" href="index.html">Inicio</a>
+                <a id="navbar-serv" href="servicios.html">Servicios</a>
+                <a id="navbar-cont" href="contacto.html">Contacto</a>
+            </nav>
+
+    </header>
+
+
+
+    <!-- Tipos de serviços -->
+    <h3 class="servico">
+        <a id="services-title" href="servicios.html">| Computadoras y Notebooks |</a>
+        <a id="services-title" href="mobile.html">| Celulares y Tablets |</a>
+        <a id="services-title" href="adicionales.html">| Servicios adicionales |</a>
+
+    </h3>
+
+
+    <ul class="servico-list" id="services-list">
+
+        <h3 id="title-soporte">Soporte en línea</h3>
+        <li id="service-soporte">Soporte remoto mediante software (TeamViewer, AnyDesk, etc).</li>
+        <li id="service-orientacion">Orientación por teléfono o videollamada.</li>
+    </ul>
+
+    <ul class="servico-list" id="services-list">
+        <h3 id="title-formacion">Formación</h3>
+        <li id="service-formacion">Formación básica en el uso de ordenadores, software y dispositivos móviles.</li>
+        <li id="service-tuto">Tutoriales personalizados para funciones específicas.</li>
+    </ul>
+
+    <ul class="servico-list" id="services-list">
+        <h3 id="title-consult">Consultoría</h3>
+        <li id="service-evolucao">Evaluación de necesidades tecnológicas.</li>
+        <li id="service-indicacao">Indicación de equipos y software adecuados al perfil del cliente.</li>
+    </ul>
+
+    </div>
+
+    <!--Ver serviços e contatos-->
+
+    <div class="container-servicos-contatos">
+        <h2 id="info">Descubra más en el área de Sobre Nosotros y Contacto.</h2>
+
+        <div class="botoes-servicos-contatos">
+            <a id="info-in" href="index.html">Sobre Nosotros</a>
+            <a id="info-cont" href="contacto.html">Contacto</a>
+        </div>
+    </div>
+
+
+    <!-- Rodapé -->
+    <footer>
+        <p id="footer-copyright">VC TechWorks © 2025. | ® Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById('flagDropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function changeLanguage(lang, element) {
+            const translations = {
+                'es': {
+                    'site-title': "Bienvenido a VC TechWorks",
+                    'about-title': "Sobre Nosotros",
+                    'navbar-in': "Inicio",
+                    'navbar-serv': "Servicios",
+                    'navbar-cont': "Contacto",
+
+                    'title-soporte': "Soporte en línea",
+                    'service-soporte': "Soporte remoto mediante software (TeamViewer, AnyDesk, etc).",
+                    'service-orientacion': "Orientación por teléfono o videollamada.",
+
+                    'title-formacion': "Formación",
+                    'service-formacion': "Formación básica en el uso de ordenadores, softwares y dispositivos móviles.",
+                    'service-tuto': "Tutoriales personalizados para funciones específicas.",
+
+                    'title-consult': "Consultoria",
+                    'service-evolucao': "Evaluación de necesidades tecnológicas.",
+                    'service-indicacao': "Indicación de equipos y softwares adecuados al perfil del cliente.",
+
+
+                    'info': "Descubra más en el área de Servicios y Contacto.",
+                    'info-in': "Sobre Nosotros",
+                    'info-serv': "Servicios",
+                    'info-cont': "Contacto",
+                    'footer-copyright': "VC TechWorks © 2025. | ® Todos los derechos reservados."
+                },
+                'us': {
+                    'site-title': "Welcome to VC TechWorks",
+                    'about-title': "About Us",
+                    'navbar-in': "Home",
+                    'navbar-serv': "Services",
+                    'navbar-cont': "Contact",
+
+                    'title-soporte': "Online Support",
+                    'service-soporte': "Remote support via software (TeamViewer, AnyDesk, etc).",
+                    'service-orientacion': "Guidance by phone or video call.",
+
+                    'title-formacion': "Training",
+                    'service-formacion': "Basic training on how to use computers, software and mobile devices.",
+                    'service-tuto': "Personalized tutorials for specific features.",
+
+                    'title-consult': "Consulting",
+                    'service-evolucao': "Assessment of technological needs.",
+                    'service-indicacao': "Indication of equipment and software suited to the client's profile.",
+
+                    'info': "Find out more in the Services and Contact area.",
+                    'info-in': "About Us",
+                    'info-serv': "Services",
+                    'info-cont': "Contact",
+                    'footer-copyright': "VC TechWorks © 2025. | ® All rights reserved."
+                },
+                'br': {
+                    'site-title': "Bem-vindo à VC TechWorks",
+                    'about-title': "Sobre Nós",
+                    'navbar-in': "Início",
+                    'navbar-serv': "Serviços",
+                    'navbar-cont': "Contato",
+
+                    'title-soporte': "Suporte Online",
+                    'service-soporte': "Suporte remoto via software (TeamViewer, AnyDesk, etc).",
+                    'service-orientacion': "Orientações por telefone ou vídeochamada.",
+
+                    'title-formacion': "Treinamento",
+                    'service-formacion': "Teinamento básico para uso de computadores, softwares e dispositivos móvies.",
+                    'service-tuto': "Tutoriais personalizados para funcionalidades específicas.",
+
+                    'title-consult': "Consultoria",
+                    'service-evolucao': "Avaliação de necessidades tecnológicas.",
+                    'service-indicacao': "Indicação de equipamentos e softwares adequados ao perfil do cliente",
+
+                    'info': "Obtenha mais informações na área de Serviços e Contato.",
+                    'info-in': "Sobre Nós",
+                    'info-serv': "Serviços",
+                    'info-cont': "Contato",
+                    'footer-copyright': "VC TechWorks © 2025. | ® Todos os direitos reservados."
+                },
+                'pt': {
+                    'site-title': "Bem-vindo à VC TechWorks",
+                    'about-title': "Sobre Nós",
+                    'navbar-in': "Início",
+                    'navbar-serv': "Serviços",
+                    'navbar-cont': "Contacto",
+
+                    'title-soporte': "Suporte Online",
+                    'service-soporte': "Suporte remoto via software (TeamViewer, AnyDesk, etc).",
+                    'service-orientacion': "Orientações por telefone ou vídeochamada.",
+
+                    'title-formacion': "Treinamento",
+                    'service-formacion': "Teinamento básico para uso de computadores, softwares e dispositivos móvies.",
+                    'service-tuto': "Tutoriais personalizados para funcionalidades específicas.",
+
+                    'title-consult': "Consultoria",
+                    'service-evolucao': "Avaliação de necessidades tecnológicas.",
+                    'service-indicacao': "Indicação de equipamentos e softwares adequados ao perfil do cliente",
+
+                    'info': "Obtenha mais informações na área de Serviços e Contacto.",
+                    'info-in': "Sobre nós",
+                    'info-serv': "Serviços",
+                    'info-cont': "Contacto",
+                    'footer-copyright': "VC TechWorks © 2025. | ® Todos os direitos reservados."
+                }
+            };
+
+            // Atualiza todas as traduções
+            const translationKeys = Object.keys(translations[lang]);
+            translationKeys.forEach(key => {
+                if (document.getElementById(key)) {
+                    document.getElementById(key).innerText = translations[lang][key];
+                }
+            });
+
+            // Atualiza a bandeira selecionada
+            document.getElementById('selectedFlag').src = element.src;
+
+            // Fecha o dropdown
+            document.getElementById('flagDropdown').style.display = 'none';
+        }
+
+        // Fecha o dropdown ao clicar fora
+        document.addEventListener('click', function (event) {
+            const selector = document.querySelector('.language-selector');
+            if (!selector.contains(event.target)) {
+                document.getElementById('flagDropdown').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
